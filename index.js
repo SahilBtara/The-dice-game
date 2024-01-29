@@ -1,3 +1,6 @@
+var player1Name = prompt("What is player 1's name ?");
+var player2Name = prompt("What is player 2's name ?");
+
 var dices = [
   "resources/dices/dice-six-faces-one.png",
   "resources/dices/dice-six-faces-two.png",
@@ -17,6 +20,7 @@ dice2.setAttribute("src", dices[randomIndex2]);
 
 var heading = document.querySelector(".heading");
 
-if (randomIndex1 > randomIndex2) heading.textContent = "Player 1 wins";
-else if (randomIndex2 > randomIndex1) heading.textContent = "Player 2 wins";
+if (randomIndex1 > randomIndex2) heading.textContent = `${player1Name} wins`;
+else if (randomIndex2 > randomIndex1)
+  heading.textContent = `${player2Name} wins`;
 else heading.textContent = "It's a draw";
