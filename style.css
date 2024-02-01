@@ -1,6 +1,6 @@
 body {
   background-color: grey;
-  font-family: 'Honk', system-ui;
+  font-family: "Honk", system-ui;
 }
 
 img {
@@ -15,6 +15,7 @@ img {
   /* justify-content: space-around; */
   margin: 25%;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .heading {
@@ -24,4 +25,14 @@ img {
   margin-top: 15%;
   text-align: center;
   margin-bottom: 0;
+}
+
+.retry {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.retry-btn {
+  background-color: grey;
+  border: 0;
 }
