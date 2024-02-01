@@ -16,6 +16,10 @@ var dices = [
 ];
 rollTheDice();
 retryButton.addEventListener("click", () => {
+  retryButton.style.opacity = 0;
+  setTimeout(function () {
+    retryButton.style.opacity = 1;
+  }, 100);
   rollTheDice();
 });
 
