@@ -1,6 +1,15 @@
 var player1Name = prompt("What is player 1's name ?");
 var player2Name = prompt("What is player 2's name ?");
 
+var player1Score = 0;
+var player2Score = 0;
+
+var score1 = document.querySelector(".score1");
+var score2 = document.querySelector(".score2");
+
+score1.textContent = `Score: ${player1Score}`;
+score2.textContent = `Score: ${player2Score}`;
+
 document.querySelector(".player1Dice h2").textContent = player1Name;
 document.querySelector(".player2Dice h2").textContent = player2Name;
 
@@ -35,8 +44,13 @@ function rollTheDice() {
 
   var heading = document.querySelector(".heading");
 
-  if (randomIndex1 > randomIndex2) heading.textContent = `${player1Name} wins`;
-  else if (randomIndex2 > randomIndex1)
+  if (randomIndex1 > randomIndex2) {
+    heading.textContent = `${player1Name} wins`;
+    player1Score++;
+    score1.textContent = `Score: ${player1Score}`;
+  } else if (randomIndex2 > randomIndex1) {
     heading.textContent = `${player2Name} wins`;
-  else heading.textContent = "It's a draw";
+    player2Score++;
+    score2.textContent = `Score: ${player2Score}`;
+  } else heading.textContent = "It's a draw";
 }
